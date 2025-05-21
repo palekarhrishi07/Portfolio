@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-xl font-bold text-primary-600 dark:text-primary-400 hover:scale-105 transition-transform duration-300">Portfolio</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="relative group hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="relative group text-primary-600 dark:text-primary-400">
+                        About
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary-600 dark:bg-primary-400"></span>
+                    </a>
+                    <a href="project.html" class="relative group hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+                        Projects
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="contact.html" class="relative group hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </div>
+                <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900 transition-all duration-300 hover:rotate-12">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+                <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900 transition-all duration-300 hover:scale-110">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm shadow-lg">
+            <div class="container mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400 hover:translate-x-2 transition-all duration-300">Home</a>
+                <a href="about.html" class="block py-2 text-primary-600 dark:text-primary-400">About</a>
+                <a href="project.html" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400 hover:translate-x-2 transition-all duration-300">Projects</a>
+                <a href="contact.html" class="block py-2 hover:text-primary-600 dark:hover:text-primary-400 hover:translate-x-2 transition-all duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="pt-32 pb-16 px-4">
+        <div class="container mx-auto">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="relative w-64 h-64">
+                        <div class="absolute inset-0 rounded-full overflow-hidden border-4 border-primary-500 shadow-lg">
+                            <img src="WhatsApp Image 2025-03-17 at 14.16.28_3401b567.jpg" alt="Profile" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300">
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent animate-fade-in">Hrishikesh Palekar</h1>
+                        <p class="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-6 tracking-wide border-b-2 border-primary-500 pb-2 inline-block">Full Stack Developer</p>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+                            <span class="block mb-2 text-lg font-medium text-primary-600 dark:text-primary-400">Passionate</span> about creating beautiful and functional web applications.
+                            <span class="block my-2 text-lg font-medium text-primary-600 dark:text-primary-400">Experienced</span> in modern web technologies and best practices.
+                            <span class="block mt-2 text-lg font-medium text-primary-600 dark:text-primary-400">Always eager</span> to learn and adapt to new technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto">
+            <div class="flex justify-center gap-4 mb-12">
+                <button id="educationBtn" class="px-6 py-2 bg-primary-600 text-white rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 font-semibold">Education</button>
+                <button id="experienceBtn" class="px-6 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 font-semibold">Work Experience</button>
+            </div>
+
+            <!-- Education Content -->
+            <div id="educationContent" class="max-w-3xl mx-auto">
+                <div class="space-y-8">
+                    <div class="card hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">Bachelor of Engineering in Computer Science</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">Moodlakatte Institute of Technology, Kundapur</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-4 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">2021 - 2025</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Currently pursuing</span> my degree with a focus on software development and web technologies.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Actively participating</span> in coding competitions and hackathons.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Maintaining</span> a CGPA of 8.2/10.0.
+                        </p>
+                    </div>
+
+                    <div class="card hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">Pre-University (PU)</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">Government College, Karwar</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-4 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">2019 - 2021</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Completed</span> Pre-University education with distinction.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Secured</span> 78% in the final examination.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Developed</span> strong foundation in mathematics and science.
+                        </p>
+                    </div>
+
+                    <div class="card hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">Secondary School Leaving Certificate (SSLC)</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">Premier School Karwar</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-4 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">2018</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Completed</span> SSLC with 81.08% under Karnataka State Board syllabus.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Developed</span> strong foundation in mathematics and science.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Laid</span> the groundwork for my technical education.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience Content -->
+            <div id="experienceContent" class="max-w-3xl mx-auto hidden">
+                <div class="space-y-8">
+                    <div class="card hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">MERN Stack Web Developer Intern</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">Zephyr Technologies and Solutions Pvt Ltd</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Mangalore, Karnataka</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-4 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">Feb 2025 - May 2025</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Developed</span> full-stack web applications using MongoDB, Express.js, React, and Node.js.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Implemented</span> RESTful APIs and integrated third-party services.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Collaborated</span> with cross-functional teams to deliver scalable solutions.
+                        </p>
+                    </div>
+
+                    <div class="card hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">React Web Developer Intern</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">Vraio Software Solutions Pvt Ltd</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Bangalore, Karnataka</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-4 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">Feb 2025 - May 2025</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Built</span> responsive and interactive user interfaces using React.js.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Optimized</span> application performance and implemented state management.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Worked</span> on component-based architecture and reusable UI elements.
+                        </p>
+                    </div>
+
+                    <div class="card hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2 text-gray-800 dark:text-gray-200">UI/UX Designer Intern</h3>
+                                <p class="text-lg text-primary-600 dark:text-primary-400 font-medium">Online Internship Program</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Remote</p>
+                            </div>
+                            <span class="mt-2 md:mt-0 px-4 py-1 bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium">Mar 2024</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Created</span> intuitive and engaging user interfaces for web applications.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Designed</span> wireframes and prototypes using modern design tools.
+                            <span class="font-medium text-primary-600 dark:text-primary-400">Conducted</span> user research and implemented feedback for better UX.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-4 bg-white dark:bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+
+            <!-- Programming Languages -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <h3 class="text-xl font-semibold mb-6 text-center">Programming Languages</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">💻</div>
+                        <h4 class="font-semibold">JavaScript</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advanced</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🐍</div>
+                        <h4 class="font-semibold">Python</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">☕</div>
+                        <h4 class="font-semibold">Java</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">⚡</div>
+                        <h4 class="font-semibold">C++</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Basic</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frontend Technologies -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <h3 class="text-xl font-semibold mb-6 text-center">Frontend Technologies</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">⚛️</div>
+                        <h4 class="font-semibold">React</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🎨</div>
+                        <h4 class="font-semibold">Tailwind CSS</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advanced</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🟢</div>
+                        <h4 class="font-semibold">Bootstrap</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">📱</div>
+                        <h4 class="font-semibold">Redux</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Technologies -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <h3 class="text-xl font-semibold mb-6 text-center">Backend Technologies</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🟢</div>
+                        <h4 class="font-semibold">Node.js</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🐘</div>
+                        <h4 class="font-semibold">MongoDB</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advanced</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🔥</div>
+                        <h4 class="font-semibold">Express</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🐍</div>
+                        <h4 class="font-semibold">Django</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advanced</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Others -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold mb-6 text-center">Tools & Others</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🎨</div>
+                        <h4 class="font-semibold">Figma</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advanced</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">📦</div>
+                        <h4 class="font-semibold">Git</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Advanced</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">⚡</div>
+                        <h4 class="font-semibold">Thunder Client</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="card text-center">
+                        <div class="text-4xl mb-2">🚀</div>
+                        <h4 class="font-semibold">Netlify</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Intermediate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent">Certifications & Achievements</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- UI Path Certification -->
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="text-4xl hover:scale-110 transition-transform duration-300">🤖</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">UI Path RPA Developer</h3>
+                                <p class="text-primary-600 dark:text-primary-400">UI Path Academy</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-500">2022</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+                            Completed comprehensive training in Robotic Process Automation (RPA) using UI Path platform, mastering workflow automation, data manipulation, and process optimization techniques.
+                        </p>
+                        <button onclick="viewCertificate('uipath')" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Google Data Analytics -->
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="text-4xl hover:scale-110 transition-transform duration-300">📊</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">Google Data Analytics</h3>
+                                <p class="text-primary-600 dark:text-primary-400">Google</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-500">2023</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+                            Mastered data analysis tools and techniques, including SQL, R programming, and data visualization for effective business insights.
+                        </p>
+                        <button onclick="viewCertificate('google_analytics')" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Infosys Java Developer -->
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="text-4xl hover:scale-110 transition-transform duration-300">☕</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">Java Software Developer</h3>
+                                <p class="text-primary-600 dark:text-primary-400">Infosys - ICT Academy</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-500">2024</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+                            Completed comprehensive training in Java development, focusing on enterprise-level applications and software development best practices.
+                        </p>
+                        <button onclick="viewCertificate('infosys')" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            View Certificate
+                        </button>
+                    </div>
+
+                    <!-- LinkedIn Java Data Structures -->
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="text-4xl hover:scale-110 transition-transform duration-300">📚</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">Java Data Structures</h3>
+                                <p class="text-primary-600 dark:text-primary-400">LinkedIn Learning</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-500">2024</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+                            Advanced training in Java data structures and algorithms, enhancing problem-solving skills and code optimization techniques.
+                        </p>
+                        <button onclick="viewCertificate('linkedin_java')" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Great Learning Frontend -->
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="text-4xl hover:scale-110 transition-transform duration-300">🎨</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">Frontend Development</h3>
+                                <p class="text-primary-600 dark:text-primary-400">Great Learning</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-500">2023</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+                            Comprehensive training in modern frontend technologies, focusing on responsive design and interactive user interfaces.
+                        </p>
+                        <button onclick="viewCertificate('great_learning')" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            View Certificate
+                        </button>
+                    </div>
+
+                    <!-- Vraio Internship -->
+                    <div class="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="text-4xl hover:scale-110 transition-transform duration-300">💼</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200">React Development Internship</h3>
+                                <p class="text-primary-600 dark:text-primary-400">Vraio, Bangalore</p>
+                                <p class="text-sm text-gray-500 dark:text-gray-500">2025</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+                            Successfully completed internship focusing on React development, contributing to real-world projects and gaining industry experience.
+                        </p>
+                        <button onclick="viewCertificate('vraio')" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            View Certificate
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-4xl w-full mx-4 relative">
+            <button onclick="closeCertificateModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="mt-4">
+                <div id="pdfViewer" class="hidden">
+                    <iframe id="certificateViewer" src="" class="w-full h-[80vh] rounded-lg shadow-lg" frameborder="0"></iframe>
+                </div>
+                <div id="imageViewer" class="hidden">
+                    <img id="certificateImage" src="" alt="Certificate" class="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function viewCertificate(type) {
+            const modal = document.getElementById('certificateModal');
+            const pdfViewer = document.getElementById('pdfViewer');
+            const imageViewer = document.getElementById('imageViewer');
+            const viewer = document.getElementById('certificateViewer');
+            const image = document.getElementById('certificateImage');
+
+            // Hide both viewers initially
+            pdfViewer.classList.add('hidden');
+            imageViewer.classList.add('hidden');
+
+            // Set the certificate file based on type
+            switch (type) {
+                case 'uipath':
+                    pdfViewer.classList.remove('hidden');
+                    viewer.src = 'assets/certificates/LearningPath_Certificate_01272023035641443.pdf';
+                    break;
+                case 'google_analytics':
+                    pdfViewer.classList.remove('hidden');
+                    viewer.src = 'assets/certificates/Google Certificate.pdf';
+                    break;
+                case 'infosys':
+                    imageViewer.classList.remove('hidden');
+                    image.src = 'assets/certificates/infosys.jpg';
+                    break;
+                case 'linkedin_java':
+                    pdfViewer.classList.remove('hidden');
+                    viewer.src = 'assets/certificates/Document from Hrishikesh.pdf';
+                    break;
+                case 'great_learning':
+                    imageViewer.classList.remove('hidden');
+                    image.src = 'assets/certificates/Hrishikesh_Palekar20231210-73-1shobc6.jpg';
+                    break;
+                case 'vraio':
+                    pdfViewer.classList.remove('hidden');
+                    viewer.src = 'assets/certificates/vraiocertificate.pdf';
+                    break;
+                default:
+                    pdfViewer.classList.remove('hidden');
+                    viewer.src = `assets/certificates/${type}_certificate.pdf`;
+            }
+
+            // Show the modal
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            // Prevent body scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertificateModal() {
+            const modal = document.getElementById('certificateModal');
+            const viewer = document.getElementById('certificateViewer');
+            const image = document.getElementById('certificateImage');
+
+            // Hide the modal
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+
+            // Clear the viewers
+            viewer.src = '';
+            image.src = '';
+
+            // Restore body scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('certificateModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCertificateModal();
+            }
+        });
+
+        // Add this script at the end of the body tag
+        document.addEventListener('DOMContentLoaded', function() {
+            const educationBtn = document.getElementById('educationBtn');
+            const experienceBtn = document.getElementById('experienceBtn');
+            const educationContent = document.getElementById('educationContent');
+            const experienceContent = document.getElementById('experienceContent');
+
+            function showEducation() {
+                educationContent.classList.remove('hidden');
+                experienceContent.classList.add('hidden');
+                educationBtn.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                educationBtn.classList.add('bg-primary-600', 'text-white');
+                experienceBtn.classList.remove('bg-primary-600', 'text-white');
+                experienceBtn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+            }
+
+            function showExperience() {
+                educationContent.classList.add('hidden');
+                experienceContent.classList.remove('hidden');
+                experienceBtn.classList.remove('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+                experienceBtn.classList.add('bg-primary-600', 'text-white');
+                educationBtn.classList.remove('bg-primary-600', 'text-white');
+                educationBtn.classList.add('bg-gray-200', 'dark:bg-gray-700', 'text-gray-700', 'dark:text-gray-300');
+            }
+
+            educationBtn.addEventListener('click', showEducation);
+            experienceBtn.addEventListener('click', showExperience);
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 shadow-lg">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/palekarhrishi07" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.237 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/hrishikesh-palekar-848365243/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="mailto:hrishikeshpalekar5@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-center text-gray-600 dark:text-gray-400 mt-4">© 2024 Hrishikesh Palekar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

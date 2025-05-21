@@ -1,0 +1,112 @@
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Dark mode scrollbar */
+
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+
+/* Smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Custom transitions */
+
+.transition-transform {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+
+/* Custom animations */
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+
+/* Custom focus styles */
+
+.focus-ring {
+    @apply focus: outline-none focus: ring-2 focus: ring-primary-500 focus: ring-offset-2 dark: focus: ring-offset-gray-900;
+}
+
+
+/* Custom button styles */
+
+.btn {
+    @apply px-4 py-2 rounded-lg transition-all duration-200 focus-ring;
+}
+
+.btn-primary {
+    @apply bg-primary-500 text-white hover: bg-primary-600 dark: bg-primary-600 dark: hover: bg-primary-700;
+}
+
+.btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover: bg-gray-300 dark: bg-gray-700 dark: text-gray-200 dark: hover: bg-gray-600;
+}
+
+
+/* Custom card styles */
+
+.card {
+    @apply bg-white dark: bg-gray-800 rounded-xl shadow-lg p-6 transition-all duration-200 hover: shadow-xl;
+}
+
+
+/* Custom form styles */
+
+.form-input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark: border-gray-600 bg-white dark: bg-gray-700 text-gray-900 dark: text-gray-100 focus-ring;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-700 dark: text-gray-300 mb-1;
+}
+
+.form-error {
+    @apply text-red-500 text-sm mt-1;
+}
